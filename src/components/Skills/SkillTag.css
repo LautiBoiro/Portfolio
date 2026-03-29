@@ -1,0 +1,61 @@
+.skill-tag {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  cursor: default;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: rgba(108, 99, 255, 0.06);
+  transition: transform 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.skill-tag:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  background: rgba(108, 99, 255, 0.15);
+}
+
+.skill-tag-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter 0.2s;
+}
+
+.skill-tag:hover .skill-tag-img {
+  filter: grayscale(0%);
+}
+
+.skill-tag-emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.skill-tag-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: rgba(10, 10, 15, 0.92);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border-radius: 0.4rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.skill-tag:hover .skill-tag-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

@@ -1,0 +1,117 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+.about-text p strong { color: var(--text); }
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.about-stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.about-stat-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.about-stat-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.about-stat-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+/* Avatar */
+.about-image-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-avatar {
+  width: 280px; height: 280px;
+  border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent3) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 5rem;
+  font-weight: 800;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  animation: avatarMorph 8s ease-in-out infinite;
+  box-shadow: 0 0 60px rgba(108, 99, 255, 0.3);
+}
+
+.about-avatar-ring {
+  position: absolute;
+  width: 310px; height: 310px;
+  border-radius: 50%;
+  border: 1px dashed rgba(108, 99, 255, 0.3);
+  animation: avatarSpin 20s linear infinite;
+}
+
+@keyframes avatarMorph {
+  0%, 100% { border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%; }
+  50%       { border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%; }
+}
+
+@keyframes avatarSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-image-wrap { order: -1; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .about-stats { grid-template-columns: 1fr; }
+}
+
+.about-photo {
+  width: 380px;
+  height: 380px;
+  border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+  object-fit: cover;
+  object-position: center top;
+  position: relative;
+  z-index: 1;
+  animation: avatarMorph 8s ease-in-out infinite;
+  box-shadow: 0 0 60px rgba(108, 99, 255, 0.3);
+}
