@@ -2,9 +2,9 @@ import { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import './Contact.css'
 
-const SERVICE_ID  = 'TU_SERVICE_ID'
-const TEMPLATE_ID = 'TU_TEMPLATE_ID'
-const PUBLIC_KEY  = 'TU_PUBLIC_KEY'
+const SERVICE_ID  = 'portfolio'
+const TEMPLATE_ID = 'template_nfwfnvw'
+const PUBLIC_KEY  = 'CRkmckjc2XOtZw1cC'
 
 const COOLDOWN_MS = 2 * 60 * 1000  // 2 minutos entre envíos
 
