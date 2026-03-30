@@ -29,7 +29,7 @@ const CONTACT_LINKS = [
   }
 ]
 
-const EMPTY_FORM = { name: '', email: '', message: '' }
+const EMPTY_FORM = { name: '', email: '', subject: '', message: '' }
 
 export function Contact () {
   const [form,    setForm]    = useState(EMPTY_FORM)
@@ -120,6 +120,17 @@ export function Contact () {
               required
             />
           </div>
+
+        <div className='contact-field'>
+          <label>Subject</label>
+          <input
+            name='subject'
+            value={form.subject}
+            onChange={handleChange}
+            placeholder='What is this about...'
+            required
+          />
+        </div>
 
           <div className='contact-field'>
             <label>Message</label>
