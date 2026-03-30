@@ -7,7 +7,7 @@ const PROJECTS = [ // para agregar más simplemente coma luego del } y repetir e
     title: 'Who wants to be a millionaire Pygame',
     description: 'This was a project from my university that replicates the game Who wants to be a millionaire',
     tags: ['Python'],
-    github: 'https://github.com/Agustin-Fernando-Arredondo/Parcial-2---Pygame.git',
+    github: 'https://github.com/LautiBoiro/Who-wants-to-be-a-millionaire-Pygame',
     demo: null,
     image: '/projects/millionaire.png'
   },/*
