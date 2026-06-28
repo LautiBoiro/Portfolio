@@ -136,3 +136,16 @@ body::before {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    max-width: 100%;
+    width: 100%;
+  }
+}
